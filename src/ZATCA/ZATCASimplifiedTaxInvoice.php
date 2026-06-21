@@ -454,6 +454,8 @@ public function getCertifccicateSignature(string $cer): string
             $invoice_line_template_copy = str_replace('__RoundingAmount', $item['cac:TaxTotal']['cbc:RoundingAmount']['#text'], $invoice_line_template_copy);
 
             $invoice_line_template_copy = str_replace('__Name', $item['cac:Item']['cbc:Name'], $invoice_line_template_copy);
+            $invoice_line_template_copy = str_replace('__PriceAmount', $item['cac:Price']['cbc:PriceAmount']['#text'], $invoice_line_template_copy);
+
 
             /*
              *
